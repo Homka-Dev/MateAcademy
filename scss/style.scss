@@ -1,0 +1,222 @@
+html{
+	scroll-behavior: smooth;
+
+	body {
+		margin: 0;
+		font-family: "Inter", sans-serif;
+		color: #292929;
+
+		.header{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			box-sizing: border-box;
+			height: 100vh;
+			padding: 64px 120px;
+			background-image: url(/images/header-bg.png) ;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+
+			.Header__top{
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.header__title{
+				margin-top: 40px;
+				margin-bottom: 0;
+				font-size: 48px;
+				line-height: 100%;
+				letter-spacing: -1.5px;
+				font-weight: 800;
+				font-style: italic;
+			}
+		}
+
+		.menu{
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			transform: translateX(-100%);
+			background: #E8EFF9;
+			height: 100vh;
+			box-sizing: border-box;
+			transition: transform 500ms;
+
+			&:target{
+				transform: translateX(0);
+			}
+			.Menu__top{
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				padding: 64px 120px;
+			}
+		}
+
+		.nav{
+			padding: 64px 120px; 
+			display: flex;
+			flex-direction: column;
+			gap: 32px ;
+
+			
+
+			.nav__link{
+				display: inline-block;
+				text-decoration: none;
+				color: #292929;
+				font-family: Inter;
+				font-weight: 700;
+				font-size: 22px;
+				line-height: 22px;
+				letter-spacing: 2px;
+				vertical-align: middle;
+				text-transform: uppercase;
+				position: relative;
+
+				&::after{
+					content: " ";
+					position: absolute;
+					bottom: -3px;
+					left: 0px;
+					right: 0;
+					height: 1px;
+					background-color: #292929;
+					transform: scale(0);
+					transform-origin: center;
+					transition: transform .34s;
+				}
+
+				&:hover{
+					&::after{
+						height: 1px;
+						transform: scale(1);
+					}
+				}
+			}
+
+
+		}
+
+		.main{
+			padding: 120px;
+			
+
+			.Recommended-title{
+				margin-top: 0;
+				margin-bottom: 64px;
+				font-size: 48px;
+				line-height: 100%;
+				font-weight: bold;
+				color: #292929;
+				text-align: center;
+				letter-spacing: -1.5px;
+			}
+
+			.categories{
+				margin-top: 120px;
+				margin-bottom: 64px;
+				font-size: 48px;
+				line-height: 100%;
+				font-weight: 700;
+				text-align: center;
+				letter-spacing: -1.5px;
+			}
+			.why-buy-direct{
+				margin-top: 0;
+				font-size: 48px;
+				line-height: 100%;
+				font-weight: 700;
+				color: #292929;
+				letter-spacing: -1.5px;
+			}
+
+			.product{
+				display: flex;
+				justify-content: center;
+
+				.card{
+					flex-basis: 324px;
+					margin: 24px;
+					text-align: left;
+
+					.card__description{
+						font-family: Inter;
+						font-weight: 400;
+						font-size: 16px;
+						line-height: 140%;
+						letter-spacing: 0px;
+
+					}
+
+					.card__price{
+						font-weight: bold;
+					}
+				}
+			}
+
+			.container{
+				padding: 0 120px;
+				.container__img{
+					margin-top: 114px;
+					margin-bottom: 0;
+
+					.container__ing-description{
+						font-family: Inter;
+						font-weight: 700;
+						font-size: 24px;
+						line-height: 140%;
+						letter-spacing: 0px;
+						margin-top: 16px;
+					}
+				}
+			}
+			.section__why-buy-direct{
+				padding: 120px 120px;
+				display: flex;
+				justify-content: space-between;
+				align-items: top;
+
+				.container__description{
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					width: 428px;
+					margin-right: 20px;
+
+					.container__description-desc{
+						font-family: Inter;
+						font-weight: 700;
+						font-size: 16px;
+						line-height: 140%;
+						letter-spacing: 0px;
+
+					}
+
+					.why__description{
+						font-family: Inter;
+						font-weight: 400;
+						font-size: 16px;
+						line-height: 27px;
+						letter-spacing: 0px;
+
+					}
+				}
+			}
+			
+			}
+			.footer{
+				width: 100%;
+				background-color: red;
+
+				.footer__img{
+					height: 460px;
+					position: absolute;
+					width: 100%;
+				}
+			}
+		}
+	}
